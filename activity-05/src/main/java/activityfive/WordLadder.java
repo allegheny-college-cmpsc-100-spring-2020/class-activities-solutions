@@ -32,7 +32,7 @@ public class WordLadder {
     System.out.println(word);
     
     // Word ladder, step 1
-    word = "P" + word.substring(1,word.length());
+    word = "P" + word.substring(1,wordLen);
     System.out.println(word);
     
     // Word ladder, step 2
