@@ -54,6 +54,8 @@ public class CatnapCaper {
     
     if (aliceSentence == 0 || bobSentence == 0) {
       System.out.println("And they catnap again!");
+    } else {
+      System.out.println("Maybe they'll catnap again one day, but not for now...");
     }
   }
 }
