@@ -26,6 +26,8 @@ public class PizzaParty {
     // Remove the part we gave away
     totalPizza.subtract(pizzaGiven);
     
+    // Finish our story via division
+    totalPizza.divide(new Fraction(2,1));
     // Use the getDecimalValue method
     System.out.println("We have " + totalPizza + " (" + totalPizza.getDecimalValue()
                        + ") of a pizza remaining.");

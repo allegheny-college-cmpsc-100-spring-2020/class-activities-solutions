@@ -50,6 +50,14 @@ public class Fraction {
     return this.denom;
   }
   
+  /** Adds a fraction with the same denom.
+   *
+   * @param addend Fraction to add
+   */
+  public void add(Fraction addend) {
+    this.numer += addend.getNumer();
+  }
+  
   /** Subtracts a fraction with same denom.
    *
    * @param subtrahend Fraction to subtract
@@ -65,6 +73,23 @@ public class Fraction {
   public void multiply(Fraction multiplier) {
     this.numer *= multiplier.getNumer();
     this.denom *= multiplier.getDenom();
+  }
+  
+  /** Divides a fraction by this instance.
+   *
+   * @param divisor Fraction to divide
+   */
+  public void divide(Fraction divisor) {
+    Fraction reciprocal = divisor.getReciprocal();
+    this.multiply(reciprocal);
+  }
+  
+  /** Creates the reciprocal of a fraction.
+   *
+   * @param fraction Fraction which to reciprocate.
+   */
+  private Fraction getReciprocal() {
+    return new Fraction(this.denom,this.numer);
   }
   
   /** Gets the value of the fraction in decimal form.
