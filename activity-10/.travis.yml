@@ -2,6 +2,7 @@ dist: trusty
 language: java
 sudo: false
 jdk: oraclejdk8
+script: javac src/main/java/DisplayOutput.java
 before_install:
  # ensure we are using the correct version of gradle
   - wget https://services.gradle.org/distributions/gradle-4.9-bin.zip
@@ -17,7 +18,6 @@ before_install:
   - pip install --upgrade pip
   - pip install proselint
   - pip install pipenv
-  - cd activity-10
 
 # cache to improve build speed
 before_cache:
@@ -36,4 +36,9 @@ before_script:
 
 # run grading checks
 script:
-  - gradle -q --console plain run
+  - gradle --version
+  - gradle clean
+  - gradle check
+  - gradle build
+  - gradle run
+  - gradle grade -x build
