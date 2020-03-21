@@ -34,3 +34,15 @@ checkstyle {
 run {
   standardInput = System.in;
 }
+
+task interactiveRun (type: JavaExec, dependsOn: 'classes') {
+  apply plugin: 'application'
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'activityten/SeasonalCalendar'
+  Random random = new Random();
+  int month = random.nextInt(12) + 1;
+  int day = random.nextInt(31) + 1;
+  String input = month +"\n"+day;
+  InputStream stream = new ByteArrayInputStream(input.getBytes());
+  standardInput = stream
+}

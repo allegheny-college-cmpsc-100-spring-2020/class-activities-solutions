@@ -36,4 +36,4 @@ before_script:
 
 # run grading checks
 script:
-  - gradle -q --console plain run
+  - gradle -q --console plain interactiveRun
