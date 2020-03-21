@@ -32,6 +32,9 @@ public class SeasonalCalendar {
       case 2:
         monthStr = "February";
         seasonStr = "Winter";
+        if (day > 29) {
+          day = 29;
+        }
         break;
       case 3:
         monthStr = "March";
