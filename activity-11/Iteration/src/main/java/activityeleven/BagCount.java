@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
 public class BagCount {
 
   public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class BagCount {
     Scanner input = null;
     File file = null;
     try {
-      file = new File("../../../../inputs/mm.csv");
+      file = new File("inputs/mm.csv");
       input = new Scanner(file);
     } catch (FileNotFoundException noFile) {
       System.exit(0);
