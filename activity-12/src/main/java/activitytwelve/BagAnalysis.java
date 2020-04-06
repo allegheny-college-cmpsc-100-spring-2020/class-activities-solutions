@@ -6,8 +6,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/** Performs various analyses on bags of candies.
+ *
+ * @author {Your Name Here}
+ */
 public class BagAnalysis {
 
+  /** Entry point.
+   *
+   * @param args The command line arguments
+   */
   public static void main(String[] args) {
     // Set up Scanner to read from file
     File file = null;
