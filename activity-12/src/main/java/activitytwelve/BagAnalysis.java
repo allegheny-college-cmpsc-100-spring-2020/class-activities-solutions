@@ -26,17 +26,17 @@ public class BagAnalysis {
     } catch (FileNotFoundException noFile) {
       System.out.println(noFile);
     }
-    
+
     // Set up integers for loop
     int candyCount;
     int column = 1;
-    
+
     // Set up objects for loop
     String row;
     Scanner line;
     Bag bag;
     ArrayList<Bag> inventory = new ArrayList<Bag>();
-    
+
     while(input.hasNextLine()) {
       row = input.nextLine();
       line = new Scanner(row);
@@ -74,13 +74,16 @@ public class BagAnalysis {
       inventory.add(bag);
       column = 1;
     }
-    
-    int index = 0;
+
     while (index < inventory.size()) {
-      bag = inventory.get(index);
-      System.out.println("Bag " + (inventory.indexOf(bag) + 1) 
-                         + " count correct: " + bag.getVerifiedTotal());
+      bag = inventory.get(index); // Remember that each object in the list is a Bag type
+      isCorrectTotal = bag.getVerifiedTotal();
+      if(!isCorrectTotal) {
+        badTotals++;
+      }
       index++;
-    }
+    } // End loop 3
+
+    System.out.println("The percentage of bags with bad totals: " + ((double)badTotals / inventory.size()) * 100 + "%");
   }
 }
