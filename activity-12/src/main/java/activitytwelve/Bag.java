@@ -1,5 +1,9 @@
 package activitytwelve;
 
+/** Creates a Bag object.
+ *
+ * @author Solutions Repository
+ */
 public class Bag {
 
   private int brown;
@@ -41,6 +45,10 @@ public class Bag {
     }
   }
   
+  /** Gets the count of a given color in the bag.
+   *
+   * @param color Candy color
+   */
   public int getColorCount(String color) {
     int total;
     switch(color.toLowerCase()) {
@@ -70,20 +78,33 @@ public class Bag {
     return total;
   }
   
+  /** Sets the reported number of total pieces in a bag.
+   *
+   * @param total The total number of pieces.
+   */
   public void setTotalPieces(int total) {
     this.total = total;
   }
   
+  /** Gets the reported number of total pieces in a bag.
+   *
+   */
   public int getTotalPieces() {
     return this.brown + this.yellow 
            + this.red + this.green
            + this.orange + this.blue;
   }
   
+  /** Gets the result of comparison between reported and calculated totals.
+   *
+   */
   public boolean getVerifiedTotal() {
     return getTotalPieces() == this.total;
   }
   
+  /** Creates a String representation of the bag.
+   *
+   */
   public String toString() {
     return "This bag contains:\n"
            + this.brown + "\tbrown pieces\n"
