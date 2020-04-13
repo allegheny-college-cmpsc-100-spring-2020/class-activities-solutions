@@ -17,7 +17,7 @@ before_install:
   - pip install --upgrade pip
   - pip install proselint
   - pip install pipenv
-  - cd activity-12
+  - cd activity-13
 
 # cache to improve build speed
 before_cache:

@@ -4,8 +4,16 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/** Makes a linear equation.
+ *
+ * @author Solutions Repository
+ */
 public class MakeLineEqn {
   
+  /** Entry point.
+   *
+   * @param args The command line arguments
+   */
   public static void main(String[] args) {
     File file = null;
     Scanner input = null;
